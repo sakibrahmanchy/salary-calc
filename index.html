@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <input type="text" id="salary">
+    <input type="text" id="increment_percentage">
+    <input type="text" id="year">
+    <button onclick="calculate()">Calculate</button>
+    <h1 id="salary_after_incremented"></h1>
+
+    <script>
+        const salary = document.getElementById('salary').value;
+        const increment_percentage = document.getElementById('increment_percentage').value;
+        const year = document.getElementById('year').value;
+
+        function calculate() {
+            const salary_after_incremented = 0;
+            console.log(salary, increment_percentage, year, salary_after_incremented);
+            for (let i = 0; i < year; i++) {
+                salary_after_incremented += (salary * increment_percentage);
+            }
+            console.log(salary_after_incremented);
+            document.getElementById('salary_after_incremented').html = salary_after_incremented;
+        }
+    </script>
+</body>
+
+</html>
